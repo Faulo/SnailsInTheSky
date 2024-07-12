@@ -25,6 +25,10 @@ namespace SitS.Player {
         [SerializeField]
         float rollSpeed = 1;
 
+        [Space]
+        [SerializeField]
+        float forwardSpeed = 1;
+
         void FixedUpdate() {
             float deltaYaw = Time.deltaTime * yawSpeed * intendedYaw;
             float deltaPitch = Time.deltaTime * pitchSpeed * intendedPitch;
@@ -40,6 +44,8 @@ namespace SitS.Player {
             //current.y = Mathf.Clamp(current.y, -maximumPitch, maximumPitch);
 
             transform.eulerAngles = current;
+
+            transform.position += forwardSpeed * Time.deltaTime * transform.forward;
         }
     }
 }
