@@ -2,9 +2,13 @@
 using UnityEngine;
 
 namespace SitS.Player {
-    sealed class PlayerController : MonoBehaviour {
+    sealed class PlaneController : MonoBehaviour {
         [SerializeField, ReadOnly]
-        internal Vector2 intendedTilt;
+        internal float intendedYaw;
+        [SerializeField, ReadOnly]
+        internal float intendedPitch;
+        [SerializeField, ReadOnly]
+        internal float intendedRoll;
 
         [SerializeField]
         float yawSpeed = 1;
@@ -17,14 +21,20 @@ namespace SitS.Player {
         [SerializeField]
         float maximumPitch = 90;
 
+        [Space]
+        [SerializeField]
+        float rollSpeed = 1;
+
         void FixedUpdate() {
-            float deltaYaw = Time.deltaTime * yawSpeed * intendedTilt.y;
-            float deltaPitch = Time.deltaTime * pitchSpeed * intendedTilt.x;
+            float deltaYaw = Time.deltaTime * yawSpeed * intendedYaw;
+            float deltaPitch = Time.deltaTime * pitchSpeed * intendedPitch;
+            float deltaRoll = Time.deltaTime * rollSpeed * intendedRoll;
 
             var current = transform.eulerAngles;
 
             current.x += deltaYaw;
             current.y += deltaPitch;
+            current.z += deltaRoll;
 
             //current.x = Mathf.Clamp(current.x, -maximumYaw, maximumYaw);
             //current.y = Mathf.Clamp(current.y, -maximumPitch, maximumPitch);
