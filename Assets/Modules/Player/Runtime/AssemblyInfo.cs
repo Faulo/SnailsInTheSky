@@ -6,8 +6,8 @@ using SitS.Player;
 
 namespace SitS.Player {
     static class AssemblyInfo {
-        public const string NAMESPACE_RUNTIME = "SitS.Aseprite";
-        public const string NAMESPACE_EDITOR = "SitS.Aseprite.Editor";
-        public const string NAMESPACE_TESTS = "SitS.Aseprite.Tests";
+        public const string NAMESPACE_RUNTIME = "SitS.Player";
+        public const string NAMESPACE_EDITOR = "SitS.Player.Editor";
+        public const string NAMESPACE_TESTS = "SitS.Player.Tests";
     }
 }
