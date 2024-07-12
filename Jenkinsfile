@@ -24,7 +24,7 @@ unityPipeline {
 	
 	// which platforms to deploy to
 	DEPLOY_TO_STEAM = '0'
-	DEPLOY_TO_ITCH = '0'
+	DEPLOY_TO_ITCH = '1'
 	DEPLOY_ON_FAILURE = '1'
 	
 	// configration for deploying to steam
