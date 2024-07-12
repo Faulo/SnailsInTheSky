@@ -35,7 +35,7 @@ unityPipeline {
 	STEAM_CREDENTIALS = ''
 	
 	// configuration for deploying to itch
-    ITCH_ID = 'faulo/super-manual-64'
+    ITCH_ID = 'faulo/snails-in-the-sky'
 	ITCH_CREDENTIALS = 'Faulo-itch.io'
 	
 	// configuration for deploying to Discord
