@@ -1,9 +1,8 @@
-using UnityEngine.UIElements;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 
-public class MainMenu : MonoBehaviour
-{
+public class MainMenu : MonoBehaviour {
     [SerializeField]
     public UIDocument uiDocument;
 
@@ -16,14 +15,13 @@ public class MainMenu : MonoBehaviour
 
     VisualElement uiCredits;
 
-    protected void OnEnable()
-    {
+    protected void OnEnable() {
         var uiRoot = uiDocument.rootVisualElement;
 
-        uiButtonStartGame   = uiRoot.Q<Button>("ButtonStartGame");
+        uiButtonStartGame = uiRoot.Q<Button>("ButtonStartGame");
         uiButtonShowOptions = uiRoot.Q<Button>("ButtonShowOptions");
         uiButtonShowCredits = uiRoot.Q<Button>("ButtonShowCredits");
-        uiButtonQuit        = uiRoot.Q<Button>("ButtonQuit");
+        uiButtonQuit = uiRoot.Q<Button>("ButtonQuit");
 
         uiCredits = uiRoot.Q<VisualElement>("Credits");
 

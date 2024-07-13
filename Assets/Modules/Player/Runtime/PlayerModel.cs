@@ -22,7 +22,7 @@ namespace SitS.Player {
         }
 
         [SerializeField]
-        internal PlaneModel plane;
+        public PlaneModel plane;
 
         [SerializeField, Range(0, 1)]
         float _health = 1;

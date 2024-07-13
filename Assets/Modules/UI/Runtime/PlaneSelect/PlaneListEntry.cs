@@ -1,21 +1,18 @@
 using SitS.Player;
 using UnityEngine.UIElements;
 
-namespace SitS.UI.PlaneSelect
-{
-    sealed class PlaneListEntryVM
-    {
-        PlaneModel planeModel;
+namespace SitS.UI.PlaneSelect {
+    sealed class PlaneListEntry {
+        readonly PlaneModel planeModel;
 
-        Button uiSelectButton;
-        Label uiNameLabel;
-        VisualElement uiPortrait;
+        readonly Button uiSelectButton;
+        readonly Label uiNameLabel;
+        readonly VisualElement uiPortrait;
 
         public delegate void OnPlaneSelectedDelegate(PlaneModel planeModel);
         public event OnPlaneSelectedDelegate onPlaneSelected;
 
-        public void Init(VisualElement visualElement, PlaneModel planeModel)
-        {
+        public PlaneListEntry(VisualElement visualElement, PlaneModel planeModel) {
             this.planeModel = planeModel;
 
             uiSelectButton = visualElement.Q<Button>("SelectButton");

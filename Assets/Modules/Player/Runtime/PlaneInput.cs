@@ -46,7 +46,6 @@ namespace SitS.Player {
         }
 
         public void OnBoost(InputValue input) {
-            Debug.Log(input.isPressed);
             this.input.intendsBoost = input.isPressed;
         }
 
