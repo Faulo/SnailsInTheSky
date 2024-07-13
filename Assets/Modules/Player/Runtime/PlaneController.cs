@@ -113,7 +113,7 @@ namespace SitS.Player {
 
             liftStep = velocity == Vector3.zero
                 ? Vector3.zero
-                : plane.liftRotation * (Time.deltaTime * plane.liftCoefficient * plane.area * velocity.sqrMagnitude * direction);
+                : Time.deltaTime * plane.liftCoefficient * plane.area * player.health * velocity.sqrMagnitude * player.alignment * transform.up;
 
             velocity += boostStep + liftStep;
 
