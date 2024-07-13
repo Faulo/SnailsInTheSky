@@ -2,7 +2,13 @@ using UnityEngine;
 
 namespace SitS.Player {
     [CreateAssetMenu]
-    sealed class PlaneModel : ScriptableObject {
+    public class PlaneModel : ScriptableObject {
+        [Space]
+        [SerializeField]
+        public string displayName;
+        [SerializeField]
+        public Texture2D portrait;
+
         [Space]
         [SerializeField]
         internal float yawSpeed = 1;
