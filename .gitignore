@@ -30,6 +30,9 @@ $RECYCLE.BIN/
 !/Packages/
 /Assets/InitTestScene*
 
+# == Blender ==
+*.blend1*
+
 # == FMOD ==
 !/FMOD Project/
 /FMOD Project/.*
