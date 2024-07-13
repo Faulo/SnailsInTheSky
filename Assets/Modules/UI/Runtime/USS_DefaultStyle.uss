@@ -48,3 +48,16 @@
 .button-menu:focus {
     scale: 1.1 1.1;
 }
+
+.title {
+    height: 100%;
+    width: 100%;
+    -unity-font-style: bold-and-italic;
+    font-size: 225px;
+    align-self: center;
+    align-items: center;
+    justify-content: flex-start;
+    -unity-text-align: upper-center;
+    color: rgb(10, 13, 72);
+    text-shadow: 50px 50px 0 rgb(165, 198, 200);
+}

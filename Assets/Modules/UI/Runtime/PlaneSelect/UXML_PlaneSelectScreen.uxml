@@ -1,0 +1,5 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Modules/UI/Runtime/USS_DefaultStyle.uss?fileID=7433441132597879392&amp;guid=e78ee50063f467243ad4274e645660e1&amp;type=3#USS_DefaultStyle" />
+    <ui:Label tabindex="-1" text="Choose a plane" parse-escape-sequences="true" display-tooltip-when-elided="true" class="title" style="position: relative; top: 26px; left: 0; margin-top: 50px; margin-right: 50px; margin-bottom: 50px; margin-left: 50px; -unity-font-style: bold-and-italic; font-size: 56px; height: 79px; width: 609px; -unity-text-align: middle-center; white-space: nowrap; text-overflow: clip; text-shadow: 10px 10px 0 rgba(136, 183, 255, 0.53);" />
+    <ui:VisualElement name="PlaneList" style="flex-grow: 1; align-self: center; flex-direction: row;" />
+</ui:UXML>

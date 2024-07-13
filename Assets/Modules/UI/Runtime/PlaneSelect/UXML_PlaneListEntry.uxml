@@ -1,0 +1,11 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Modules/UI/Runtime/USS_DefaultStyle.uss?fileID=7433441132597879392&amp;guid=e78ee50063f467243ad4274e645660e1&amp;type=3#USS_DefaultStyle" />
+    <ui:VisualElement style="flex-grow: 1; height: 720%; width: 370px;">
+        <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="SelectButton" class="button-menu" style="height: 100px; flex-basis: 500px; width: 350px; flex-direction: column;">
+            <ui:Label tabindex="-1" text="Paper Plane 3000" parse-escape-sequences="true" display-tooltip-when-elided="true" enable-rich-text="false" name="PlaneName" style="height: 10%;" />
+            <ui:VisualElement style="flex-grow: 1; height: 10%; flex-basis: 0;" />
+            <ui:VisualElement name="PlanePortrait" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Modules/UI/Runtime/PlaneSelect/T_DebugPaperPlane.PNG?fileID=2800000&amp;guid=d0032a18bc34e6b4fb48e3d731741ad1&amp;type=3#T_DebugPaperPlane&quot;); height: 70%; width: 100%; align-self: center;" />
+            <ui:VisualElement style="flex-grow: 1; height: 10%; flex-basis: 0;" />
+        </ui:Button>
+    </ui:VisualElement>
+</ui:UXML>

@@ -9,30 +9,30 @@ public class MainMenu : MonoBehaviour
 
     public string startScene = "SC_L01_KidsRoom";
 
-    private Button buttonStartGame;
-    private Button buttonShowOptions;
-    private Button buttonShowCredits;
-    private Button buttonQuit;
+    Button uiButtonStartGame;
+    Button uiButtonShowOptions;
+    Button uiButtonShowCredits;
+    Button uiButtonQuit;
 
-    private VisualElement credits;
+    VisualElement uiCredits;
 
-    private void OnEnable()
+    protected void OnEnable()
     {
-        VisualElement root = uiDocument.rootVisualElement;
+        var uiRoot = uiDocument.rootVisualElement;
 
-        buttonStartGame   = root.Q<Button>("ButtonStartGame");
-        buttonShowOptions = root.Q<Button>("ButtonShowOptions");
-        buttonShowCredits = root.Q<Button>("ButtonShowCredits");
-        buttonQuit        = root.Q<Button>("ButtonQuit");
+        uiButtonStartGame   = uiRoot.Q<Button>("ButtonStartGame");
+        uiButtonShowOptions = uiRoot.Q<Button>("ButtonShowOptions");
+        uiButtonShowCredits = uiRoot.Q<Button>("ButtonShowCredits");
+        uiButtonQuit        = uiRoot.Q<Button>("ButtonQuit");
 
-        credits = root.Q<VisualElement>("Credits");
+        uiCredits = uiRoot.Q<VisualElement>("Credits");
 
-        buttonStartGame.clicked += () => SceneManager.LoadScene(startScene);
-        buttonShowCredits.clicked += () => credits.visible = !credits.visible;
-        buttonQuit.clicked += () => Application.Quit();
+        uiButtonStartGame.clicked += () => SceneManager.LoadScene(startScene);
+        uiButtonShowCredits.clicked += () => uiCredits.visible = !uiCredits.visible;
+        uiButtonQuit.clicked += () => Application.Quit();
 
-        buttonStartGame.Focus();
+        uiButtonStartGame.Focus();
 
-        Debug.Assert(buttonStartGame == GetComponent<UIDocument>().rootVisualElement.focusController.focusedElement);
+        Debug.Assert(uiButtonStartGame == GetComponent<UIDocument>().rootVisualElement.focusController.focusedElement);
     }
 }
