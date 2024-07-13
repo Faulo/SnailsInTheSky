@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2065452313411712624}
   - component: {fileID: 4655777758839264105}
   - component: {fileID: 2239082395138944631}
-  - component: {fileID: 7243712775970397574}
+  - component: {fileID: 4290424286684000587}
   m_Layer: 0
   m_Name: VFX_Fire
   m_TagString: Untagged
@@ -136,9 +136,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ExecuteInEditor: 1
   m_Bindings:
-  - {fileID: 7243712775970397574}
+  - {fileID: 4290424286684000587}
   m_VisualEffect: {fileID: 2065452313411712624}
---- !u!114 &7243712775970397574
+--- !u!114 &4290424286684000587
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
