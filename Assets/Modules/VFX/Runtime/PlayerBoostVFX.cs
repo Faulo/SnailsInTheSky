@@ -10,19 +10,13 @@ namespace SitS.VFX {
         [SerializeField, Expandable]
         VisualEffect visualEffect;
 
-        bool wasEmitting = false;
+        [Space]
+        [SerializeField]
+        string fieldName = "IsEmitting";
 
         void Update() {
             bool shouldBeEmitting = player && player.isBoosting;
-
-            if (wasEmitting != shouldBeEmitting) {
-                wasEmitting = shouldBeEmitting;
-                if (shouldBeEmitting) {
-                    visualEffect.Play();
-                } else {
-                    visualEffect.Stop();
-                }
-            }
+            visualEffect.SetBool(fieldName, shouldBeEmitting);
         }
     }
 }

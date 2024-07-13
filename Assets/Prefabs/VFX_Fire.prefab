@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4655777758839264105}
   - component: {fileID: 2239082395138944631}
   - component: {fileID: 7243712775970397574}
+  - component: {fileID: 2488749990001897940}
   m_Layer: 0
   m_Name: VFX_Fire
   m_TagString: Untagged
@@ -45,7 +46,7 @@ VisualEffect:
   m_Enabled: 1
   m_Asset: {fileID: 8926484042661614526, guid: 88cd9fc157044ea47889bbb8d0a96d2d, type: 3}
   m_InitialEventName: 
-  m_InitialEventNameOverriden: 1
+  m_InitialEventNameOverriden: 0
   m_StartSeed: 0
   m_ResetSeedOnPlay: 1
   m_AllowInstancing: 1
@@ -60,10 +61,10 @@ VisualEffect:
       m_Array: []
     m_Vector3f:
       m_Array:
-      - m_Value: {x: -0.13, y: 0, z: -0.03}
+      - m_Value: {x: -0.12, y: 0, z: -0.04}
         m_Name: FireStart
         m_Overridden: 1
-      - m_Value: {x: 0.13, y: 0, z: -0.03}
+      - m_Value: {x: 0.12, y: 0, z: -0.04}
         m_Name: FireEnd
         m_Overridden: 1
     m_Vector4f:
@@ -153,3 +154,18 @@ MonoBehaviour:
   m_Property:
     m_Name: Transform
   Target: {fileID: 0}
+--- !u!114 &2488749990001897940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7314444457840174551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a2e6727e49de984b9a05dc5f4c20a2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 11400000, guid: 26c319f71a86a3e45a76a23cc5c091ea, type: 2}
+  visualEffect: {fileID: 2065452313411712624}
+  fieldName: IsEmitting

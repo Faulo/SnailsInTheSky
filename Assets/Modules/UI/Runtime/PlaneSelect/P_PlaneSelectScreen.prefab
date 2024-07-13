@@ -68,6 +68,7 @@ MonoBehaviour:
   planeModels:
   - {fileID: 11400000, guid: d8295f023eff1a749b7472ec353716d7, type: 2}
   - {fileID: 11400000, guid: 4739a453278f3bc48b55aa0a07227ef6, type: 2}
+  - {fileID: 11400000, guid: 47a16c874e814ab4ab76ac6d8529c23f, type: 2}
   player: {fileID: 11400000, guid: 26c319f71a86a3e45a76a23cc5c091ea, type: 2}
   gameScene: SC_L01_KidsRoom
 --- !u!114 &7726609485776465195

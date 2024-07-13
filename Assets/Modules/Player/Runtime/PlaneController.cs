@@ -16,12 +16,6 @@ namespace SitS.Player {
         [SerializeField]
         Rigidbody attachedRigidbody;
 
-        [Space]
-        [SerializeField]
-        float maximumYaw = 90;
-        [SerializeField]
-        float maximumPitch = 90;
-
         GameObject modelPrefab => plane
             ? plane.meshPrefab
             : null;

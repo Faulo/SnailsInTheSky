@@ -101,6 +101,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PaperPlanes_TheBasic
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9517507a6b274934b883484b435ee7de,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3451118302482216456, guid: 9517507a6b274934b883484b435ee7de,
         type: 3}
       propertyPath: m_Convex
@@ -240,41 +245,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7314444457840174551, guid: 540284ce220a40c448a7c08265f2016f,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 6969842765526386480}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 540284ce220a40c448a7c08265f2016f, type: 3}
---- !u!1 &1695185701470391747 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7314444457840174551, guid: 540284ce220a40c448a7c08265f2016f,
-    type: 3}
-  m_PrefabInstance: {fileID: 8215869822359414804}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &6969842765526386480
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1695185701470391747}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a2e6727e49de984b9a05dc5f4c20a2c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 11400000, guid: 26c319f71a86a3e45a76a23cc5c091ea, type: 2}
-  visualEffect: {fileID: 7975127261361495652}
 --- !u!4 &7461382244390218083 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1551636909730333047, guid: 540284ce220a40c448a7c08265f2016f,
-    type: 3}
-  m_PrefabInstance: {fileID: 8215869822359414804}
-  m_PrefabAsset: {fileID: 0}
---- !u!2083052967 &7975127261361495652 stripped
-VisualEffect:
-  m_CorrespondingSourceObject: {fileID: 2065452313411712624, guid: 540284ce220a40c448a7c08265f2016f,
     type: 3}
   m_PrefabInstance: {fileID: 8215869822359414804}
   m_PrefabAsset: {fileID: 0}

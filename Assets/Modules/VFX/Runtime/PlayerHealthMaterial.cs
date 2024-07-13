@@ -8,6 +8,8 @@ namespace SitS.VFX {
         PlayerModel player;
         [SerializeField, Expandable]
         Renderer attachedRenderer;
+
+        [Space]
         [SerializeField]
         string fieldName = "health";
         [SerializeField]
