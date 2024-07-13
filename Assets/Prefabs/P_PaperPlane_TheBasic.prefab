@@ -214,6 +214,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2065452313411712624, guid: 540284ce220a40c448a7c08265f2016f,
         type: 3}
+      propertyPath: m_InitialEventNameOverriden
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065452313411712624, guid: 540284ce220a40c448a7c08265f2016f,
+        type: 3}
       propertyPath: m_PropertySheet.m_Float.m_Array.Array.size
       value: 3
       objectReference: {fileID: 0}
