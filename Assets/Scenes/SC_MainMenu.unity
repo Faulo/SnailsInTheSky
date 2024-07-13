@@ -188,8 +188,49 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2270192584077451990, guid: 56ff3268665b9f34b97a7de2d2d27472,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 98913703}
   m_SourcePrefab: {fileID: 100100000, guid: 56ff3268665b9f34b97a7de2d2d27472, type: 3}
+--- !u!1 &98913702 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2270192584077451990, guid: 56ff3268665b9f34b97a7de2d2d27472,
+    type: 3}
+  m_PrefabInstance: {fileID: 98913701}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &98913703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 98913702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1891654073
+      Data2: 1172948999
+      Data3: -569853007
+      Data4: -1576255768
+    Path: event:/SoundtrackMainMenu
+  Event: 
+  PlayEvent: 1
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &591409026
 GameObject:
   m_ObjectHideFlags: 0

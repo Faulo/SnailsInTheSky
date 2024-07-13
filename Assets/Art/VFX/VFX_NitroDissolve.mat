@@ -56,11 +56,14 @@ Material:
     m_Ints: []
     m_Floats:
     - _AlphaClip: 0
-    - _BurnProgress: 0.27
+    - _BurnProgress: 0
+    - _BurningSpeed: 10
     - _BurningThickness: 0.05
+    - _CurrentAngleOffset: 0
     - _Dissolve: 0
     - _EdgeRadius: 0
     - _EdgeThickness: 0.2
+    - _IsBurning: 1
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5387068649168451872}
   - component: {fileID: 8884910519854780232}
   m_Layer: 0
-  m_Name: PF_MainMenu
+  m_Name: P_MainMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf81ec8a6f268654789f931f48332c3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  uiDocument: {fileID: 8884910519854780232}
   startScene: SC_L01_KidsRoom
 --- !u!114 &8884910519854780232
 MonoBehaviour:
