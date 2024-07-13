@@ -30,6 +30,9 @@ namespace SitS.Player {
             : null;
 
         void Start() {
+            player.health = 1;
+            player.isBoosting = false;
+
             RecreateModel();
         }
 
@@ -82,13 +85,7 @@ namespace SitS.Player {
         Vector3 boostStep;
 
         [SerializeField]
-        Vector3 gravityStep;
-
-        [SerializeField]
         Vector3 liftStep;
-
-        [SerializeField]
-        Vector3 dragStep;
 
         [SerializeField]
         Vector3 velocity = Vector3.zero;
@@ -102,9 +99,11 @@ namespace SitS.Player {
             float deltaPitch = plane.pitchSpeed * input.intendedPitch;
             float deltaRoll = plane.rollSpeed * input.intendedRoll;
 
-            var deltaRotation = Quaternion.Euler(deltaYaw, deltaPitch, deltaRoll);
+            var deltaRotation = Quaternion.Euler(-deltaYaw, deltaPitch, deltaRoll);
 
-            attachedRigidbody.angularVelocity = new(deltaYaw, deltaPitch, deltaRoll);
+            attachedRigidbody.angularVelocity = attachedRigidbody.rotation * new Vector3(deltaYaw, deltaPitch, deltaRoll);
+
+            attachedRigidbody.drag = plane.dragCoefficient * plane.area * player.health;
 
             velocity = attachedRigidbody.velocity;
 
@@ -112,30 +111,24 @@ namespace SitS.Player {
 
             ProcessBoost();
 
-            gravityStep = Time.deltaTime * plane.gravityMultiplier * Vector3.down;
+            boostStep = player.isBoosting
+                ? Time.deltaTime * plane.boostMultiplier * transform.forward
+                : Vector3.zero;
 
             liftStep = velocity == Vector3.zero
                 ? Vector3.zero
                 : plane.liftRotation * (Time.deltaTime * plane.liftCoefficient * plane.area * velocity.sqrMagnitude * velocity.normalized);
 
-            dragStep = velocity == Vector3.zero
-                ? Vector3.zero
-                : Time.deltaTime * plane.dragCoefficient * plane.area * velocity.sqrMagnitude * velocity.normalized;
-
-            velocity += boostStep + gravityStep + liftStep - dragStep;
+            velocity += boostStep + liftStep;
 
             attachedRigidbody.velocity = velocity;
         }
 
         void ProcessBoost() {
-
             player.isBoosting = input.intendsBoost && player.canBoost;
 
             if (player.isBoosting) {
                 player.health -= Mathf.Clamp01(Time.deltaTime * player.burnSpeed);
-                boostStep = Time.deltaTime * plane.boostMultiplier * transform.forward;
-            } else {
-                boostStep = Vector3.zero;
             }
         }
     }

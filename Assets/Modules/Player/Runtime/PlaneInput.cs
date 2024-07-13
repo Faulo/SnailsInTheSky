@@ -45,8 +45,15 @@ namespace SitS.Player {
             rightRoll = input.Get<float>();
         }
 
-        public void OnFire(InputValue input) {
+        public void OnBoost(InputValue input) {
             this.input.intendsBoost = input.isPressed;
+        }
+
+        void Start() {
+            input.intendedYaw = 0;
+            input.intendedPitch = 0;
+            input.intendedRoll = 0;
+            input.intendsBoost = false;
         }
     }
 }

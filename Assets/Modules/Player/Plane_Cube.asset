@@ -12,13 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f03c7a7a00400e4fbc83437b0cb399c, type: 3}
   m_Name: Plane_Cube
   m_EditorClassIdentifier: 
+  displayName: 
+  portrait: {fileID: 0}
   yawSpeed: 1
   pitchSpeed: 1
   rollSpeed: 1
   meshPrefab: {fileID: 2989735064702407704, guid: b0b8423f97acb114cb24218565b0cee9,
     type: 3}
   dragCoefficient: 1
-  liftCoefficient: 1
+  liftCoefficient: 0
   liftRotation: {x: 0.70710677, y: 0, z: 0, w: 0.70710677}
-  gravityMultiplier: 1
+  gravityMultiplier: 0
+  boostMultiplier: 1
   area: 1

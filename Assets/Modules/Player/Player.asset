@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Player
   m_EditorClassIdentifier: 
   prefab: {fileID: 5446436089485046346, guid: 17da0fe43e7028f439f5653483e76b83, type: 3}
-  health: 1
-  isBoosting: 0
-  burnSpeed: 1
+  plane: {fileID: 11400000, guid: 4739a453278f3bc48b55aa0a07227ef6, type: 2}
+  _health: 1
+  _isBoosting: 0
+  burnSpeed: 0.1

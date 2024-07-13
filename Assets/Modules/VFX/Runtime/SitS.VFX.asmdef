@@ -1,0 +1,19 @@
+{
+    "name": "SitS.VFX",
+    "rootNamespace": "",
+    "references": [
+        "Unity.InputSystem",
+        "Slothsoft.UnityExtensions",
+        "MyBox",
+        "SitS.Player"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

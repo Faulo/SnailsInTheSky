@@ -6,8 +6,8 @@ using SitS.UI;
 
 namespace SitS.UI {
     static class AssemblyInfo {
-        public const string NAMESPACE_RUNTIME = "SitS.UI";
-        public const string NAMESPACE_EDITOR = "SitS.UI.Editor";
-        public const string NAMESPACE_TESTS = "SitS.UI.Tests";
+        internal const string NAMESPACE_RUNTIME = "SitS.UI";
+        internal const string NAMESPACE_EDITOR = "SitS.UI.Editor";
+        internal const string NAMESPACE_TESTS = "SitS.UI.Tests";
     }
 }

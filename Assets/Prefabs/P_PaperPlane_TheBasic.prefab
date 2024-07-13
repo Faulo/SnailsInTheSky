@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8377253063586996244}
   - component: {fileID: 7527103894317994536}
   - component: {fileID: 7757679795515173517}
+  - component: {fileID: 6309432271582000956}
   m_Layer: 0
   m_Name: VFX_Fire
   m_TagString: Untagged
@@ -44,8 +45,8 @@ VisualEffect:
   m_GameObject: {fileID: 6817618400571648348}
   m_Enabled: 1
   m_Asset: {fileID: 8926484042661614526, guid: 88cd9fc157044ea47889bbb8d0a96d2d, type: 3}
-  m_InitialEventName: OnPlay
-  m_InitialEventNameOverriden: 0
+  m_InitialEventName: 
+  m_InitialEventNameOverriden: 1
   m_StartSeed: 0
   m_ResetSeedOnPlay: 1
   m_AllowInstancing: 1
@@ -156,6 +157,20 @@ MonoBehaviour:
   m_Property:
     m_Name: Transform
   Target: {fileID: 0}
+--- !u!114 &6309432271582000956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6817618400571648348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a2e6727e49de984b9a05dc5f4c20a2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 11400000, guid: 26c319f71a86a3e45a76a23cc5c091ea, type: 2}
+  visualEffect: {fileID: 2991300686286411717}
 --- !u!1 &7273028374075025354
 GameObject:
   m_ObjectHideFlags: 0
@@ -260,11 +275,43 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9517507a6b274934b883484b435ee7de,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8035733143550709600}
   m_SourcePrefab: {fileID: 100100000, guid: 9517507a6b274934b883484b435ee7de, type: 3}
+--- !u!23 &2827181460550503290 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 9517507a6b274934b883484b435ee7de,
+    type: 3}
+  m_PrefabInstance: {fileID: 3530187891463182334}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3996670150076084245 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9517507a6b274934b883484b435ee7de,
     type: 3}
   m_PrefabInstance: {fileID: 3530187891463182334}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &4340580532002843311 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 9517507a6b274934b883484b435ee7de,
+    type: 3}
+  m_PrefabInstance: {fileID: 3530187891463182334}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8035733143550709600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4340580532002843311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ce3ca1c7c8a7dc4b9456953f949b963, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 11400000, guid: 26c319f71a86a3e45a76a23cc5c091ea, type: 2}
+  attachedRenderer: {fileID: 2827181460550503290}
+  fieldName: _BurnProgress
+  negate: 1

@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace SitS.Player {
     [CreateAssetMenu]
-    sealed class PlayerModel : ScriptableObject {
+    public sealed class PlayerModel : ScriptableObject {
         [SerializeField]
         internal GameObject prefab;
 
@@ -25,11 +25,21 @@ namespace SitS.Player {
         internal PlaneModel plane;
 
         [SerializeField, Range(0, 1)]
-        internal float health = 1;
-        internal bool canBoost => health > 0;
+        float _health = 1;
+        public float health {
+            get => _health;
+            internal set => _health = Mathf.Clamp01(value);
+        }
+
+        internal bool canBoost => _health > 0;
 
         [SerializeField]
-        internal bool isBoosting = false;
+        bool _isBoosting = false;
+        public bool isBoosting {
+            get => _isBoosting;
+            internal set => _isBoosting = value;
+        }
+
         [SerializeField]
         internal float burnSpeed = 1;
     }
