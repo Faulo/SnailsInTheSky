@@ -1,8 +1,30 @@
 ﻿using MyBox;
+using Slothsoft.UnityExtensions;
 using UnityEngine;
 
 namespace SitS.Player {
+    [ExecuteAlways]
     sealed class PlaneController : MonoBehaviour {
+
+        [SerializeField, Expandable]
+        PlaneModel model;
+
+        [Space]
+        [SerializeField]
+        float forwardSpeed = 1;
+        [SerializeField]
+        float maximumYaw = 90;
+        [SerializeField]
+        float maximumPitch = 90;
+
+        GameObject modelPrefab => model
+            ? model.meshPrefab
+            : null;
+        GameObject modelInstance => transform.childCount > 0
+            ? transform.GetChild(0).gameObject
+            : null;
+
+        [Space]
         [SerializeField, ReadOnly]
         internal float intendedYaw;
         [SerializeField, ReadOnly]
@@ -10,26 +32,64 @@ namespace SitS.Player {
         [SerializeField, ReadOnly]
         internal float intendedRoll;
 
-        [SerializeField]
-        float yawSpeed = 1;
-        [SerializeField]
-        float maximumYaw = 90;
+        float yawSpeed => model.yawSpeed;
+        float pitchSpeed => model.pitchSpeed;
+        float rollSpeed => model.rollSpeed;
 
-        [Space]
-        [SerializeField]
-        float pitchSpeed = 1;
-        [SerializeField]
-        float maximumPitch = 90;
+        void Start() {
+            RecreateModel();
+        }
 
-        [Space]
-        [SerializeField]
-        float rollSpeed = 1;
+#if UNITY_EDITOR
+        void Update() {
+            RecreateModel();
+        }
+#endif
 
-        [Space]
-        [SerializeField]
-        float forwardSpeed = 1;
+        void RecreateModel() {
+            if (modelPrefab) {
+                if (modelInstance && modelInstance.name != modelPrefab.name) {
+                    DestroyModel();
+                }
+
+                if (!modelInstance) {
+                    CreateModel();
+                }
+            } else {
+                DestroyModel();
+            }
+        }
+
+        void DestroyModel() {
+            if (modelInstance) {
+                if (Application.isPlaying) {
+                    Destroy(modelInstance);
+                } else {
+                    DestroyImmediate(modelInstance);
+                }
+            }
+        }
+
+        void CreateModel() {
+#if UNITY_EDITOR
+            if (Application.isPlaying) {
+#endif
+                var instance = Instantiate(modelPrefab, transform);
+                instance.name = modelPrefab.name;
+#if UNITY_EDITOR
+            } else {
+                var instance = UnityEditor.PrefabUtility.InstantiatePrefab(modelPrefab, transform);
+                instance.hideFlags = HideFlags.DontSave | HideFlags.NotEditable;
+                instance.name = modelPrefab.name;
+            }
+#endif
+        }
 
         void FixedUpdate() {
+            if (!Application.isPlaying) {
+                return;
+            }
+
             float deltaYaw = Time.deltaTime * yawSpeed * intendedYaw;
             float deltaPitch = Time.deltaTime * pitchSpeed * intendedPitch;
             float deltaRoll = Time.deltaTime * rollSpeed * intendedRoll;
