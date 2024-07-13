@@ -19,7 +19,8 @@ MonoBehaviour:
   rollSpeed: 1
   meshPrefab: {fileID: 2989735064702407704, guid: b0b8423f97acb114cb24218565b0cee9,
     type: 3}
-  dragCoefficient: 1
+  dragMinimum: 0
+  dragMaximum: 1
   liftCoefficient: 0
   liftRotation: {x: 0.70710677, y: 0, z: 0, w: 0.70710677}
   boostMultiplier: 2

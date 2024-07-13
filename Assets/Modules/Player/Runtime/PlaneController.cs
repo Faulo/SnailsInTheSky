@@ -97,11 +97,13 @@ namespace SitS.Player {
 
             attachedRigidbody.angularVelocity = attachedRigidbody.rotation * new Vector3(deltaYaw, deltaPitch, deltaRoll);
 
-            attachedRigidbody.drag = plane.dragCoefficient * plane.area * player.health;
-
             velocity = attachedRigidbody.velocity;
 
             velocity = deltaRotation * velocity;
+
+            var direction = velocity.normalized;
+
+            ProcessAlignment(direction);
 
             ProcessBoost();
 
@@ -111,11 +113,21 @@ namespace SitS.Player {
 
             liftStep = velocity == Vector3.zero
                 ? Vector3.zero
-                : plane.liftRotation * (Time.deltaTime * plane.liftCoefficient * plane.area * velocity.sqrMagnitude * velocity.normalized);
+                : plane.liftRotation * (Time.deltaTime * plane.liftCoefficient * plane.area * velocity.sqrMagnitude * direction);
 
             velocity += boostStep + liftStep;
 
             attachedRigidbody.velocity = velocity;
+        }
+
+        void ProcessAlignment(in Vector3 direction) {
+            float dot = direction == Vector3.zero
+                ? 0
+                : Vector3.Dot(transform.forward, direction);
+
+            player.alignment = Mathf.InverseLerp(0, 1, dot);
+
+            attachedRigidbody.drag = Mathf.Lerp(plane.dragMaximum, plane.dragMinimum, player.alignment) * plane.area * player.health;
         }
 
         void ProcessBoost() {

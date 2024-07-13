@@ -23,7 +23,9 @@ namespace SitS.Player {
         [SerializeField]
         internal GameObject meshPrefab;
         [SerializeField]
-        internal float dragCoefficient = 1;
+        internal float dragMinimum = 0;
+        [SerializeField]
+        internal float dragMaximum = 5;
         [SerializeField]
         internal float liftCoefficient = 1;
         [SerializeField]

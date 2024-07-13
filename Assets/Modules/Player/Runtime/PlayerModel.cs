@@ -34,6 +34,9 @@ namespace SitS.Player {
         internal bool canBoost => _health > 0;
 
         [SerializeField]
+        internal float alignment;
+
+        [SerializeField]
         bool _isBoosting = false;
         public bool isBoosting {
             get => _isBoosting;
