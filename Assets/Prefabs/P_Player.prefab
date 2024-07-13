@@ -92,7 +92,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48da7765bfc327447ad90ea3c9d4d954, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  model: {fileID: 11400000, guid: d8295f023eff1a749b7472ec353716d7, type: 2}
+  model: {fileID: 11400000, guid: 4739a453278f3bc48b55aa0a07227ef6, type: 2}
   forwardSpeed: 1
   maximumYaw: 90
   maximumPitch: 90
