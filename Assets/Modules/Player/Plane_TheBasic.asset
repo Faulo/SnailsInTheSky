@@ -22,6 +22,5 @@ MonoBehaviour:
   dragCoefficient: 1
   liftCoefficient: 0
   liftRotation: {x: 0.70710677, y: 0, z: 0, w: 0.70710677}
-  gravityMultiplier: 0.25
-  boostMultiplier: 1
+  boostMultiplier: 2
   area: 1
