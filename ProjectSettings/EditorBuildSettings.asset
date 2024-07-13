@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SC_L01_KidsRoom.unity
     guid: e5ac962e860e9264cbf014ccccbacd62
+  - enabled: 1
+    path: Assets/Scenes/SC_PlaneSelect.unity
+    guid: effa411601117034b9c762de469a56d8
   m_configObjects: {}

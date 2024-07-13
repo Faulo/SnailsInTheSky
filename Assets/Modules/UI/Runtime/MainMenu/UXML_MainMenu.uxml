@@ -10,11 +10,11 @@
             <ui:VisualElement name="Title" style="flex-grow: 1; height: 25%;">
                 <ui:Label tabindex="-1" text="Snails in the Sky" parse-escape-sequences="true" display-tooltip-when-elided="true" class="title" />
             </ui:VisualElement>
-            <ui:VisualElement name="Spacer" style="flex-grow: 1; height: 5%;" />
-            <ui:VisualElement name="Buttons" style="flex-grow: 1; border-top-width: 0; border-bottom-width: 0; border-right-width: 900px; border-left-width: 900px; height: 50%; align-self: stretch;">
+            <ui:VisualElement name="Spacer" style="flex-grow: 1; height: 7%;" />
+            <ui:VisualElement name="Buttons" style="flex-grow: 1; border-top-width: 0; border-bottom-width: 0; border-right-width: 900px; border-left-width: 900px; height: 48%; align-self: stretch;">
                 <ui:Button text="Snail Away" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ButtonStartGame" class="button-menu" style="align-self: auto;" />
-                <ui:Button text="Configure Snailing" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ButtonShowOptions" class="button-menu" />
-                <ui:Button text="Who Snailed This" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ButtonShowCredits" enable-rich-text="true" class="button-menu" style="height: auto;" />
+                <ui:Button text="Configure Snailing" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ButtonShowOptions" class="button-menu" style="-unity-text-align: middle-center; white-space: nowrap; translate: 0 0;" />
+                <ui:Button text="Who Snailed This" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ButtonShowCredits" enable-rich-text="true" class="button-menu" style="height: 80px;" />
                 <ui:Button text="Stop Snailing" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ButtonQuit" class="button-menu" />
             </ui:VisualElement>
             <ui:VisualElement name="Spacer" style="flex-grow: 1; height: 10%;" />

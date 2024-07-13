@@ -104,6 +104,9 @@
 	</object>
 	<object class="MixerBusPanner" id="{8e9f47b2-6b9e-4835-89bc-90310ecde3d7}" />
 	<object class="SingleSound" id="{e45ff898-d85b-486e-b096-81b8c1085032}">
+		<property name="volume">
+			<value>-11.5</value>
+		</property>
 		<property name="looping">
 			<value>true</value>
 		</property>
@@ -131,6 +134,9 @@
 	<object class="SingleSound" id="{9a9b2b55-9447-43ae-a16f-ff4387b04088}">
 		<property name="start">
 			<value>2</value>
+		</property>
+		<property name="volume">
+			<value>-2</value>
 		</property>
 		<property name="looping">
 			<value>true</value>
@@ -171,10 +177,10 @@
 			<value>-80</value>
 		</property>
 		<property name="attackTime">
-			<value>4000</value>
+			<value>2200</value>
 		</property>
 		<property name="releaseTime">
-			<value>4000</value>
+			<value>900</value>
 		</property>
 		<property name="finalValue">
 			<value>-80</value>
@@ -188,10 +194,10 @@
 			<value>-80</value>
 		</property>
 		<property name="attackTime">
-			<value>4000</value>
+			<value>360</value>
 		</property>
 		<property name="releaseTime">
-			<value>4000</value>
+			<value>0</value>
 		</property>
 		<property name="finalValue">
 			<value>-80</value>
@@ -205,7 +211,7 @@
 			<value>-80</value>
 		</property>
 		<property name="attackTime">
-			<value>4000</value>
+			<value>0</value>
 		</property>
 		<property name="releaseTime">
 			<value>4000</value>
