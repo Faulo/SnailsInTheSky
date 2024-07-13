@@ -12,8 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f03c7a7a00400e4fbc83437b0cb399c, type: 3}
   m_Name: Plane_TheBasic
   m_EditorClassIdentifier: 
-  dragCoefficient: 1
   yawSpeed: 50
   pitchSpeed: 50
   rollSpeed: 50
-  meshPrefab: {fileID: 0}
+  meshPrefab: {fileID: 919132149155446097, guid: f801cc22d44e08e4e8594b9f1c1f7a59,
+    type: 3}
+  dragCoefficient: 1
+  liftCoefficient: 1
+  gravityMultiplier: 0
+  area: 1

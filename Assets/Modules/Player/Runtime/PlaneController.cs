@@ -11,8 +11,6 @@ namespace SitS.Player {
 
         [Space]
         [SerializeField]
-        float forwardSpeed = 1;
-        [SerializeField]
         float maximumYaw = 90;
         [SerializeField]
         float maximumPitch = 90;
@@ -31,10 +29,8 @@ namespace SitS.Player {
         internal float intendedPitch;
         [SerializeField, ReadOnly]
         internal float intendedRoll;
-
-        float yawSpeed => model.yawSpeed;
-        float pitchSpeed => model.pitchSpeed;
-        float rollSpeed => model.rollSpeed;
+        [SerializeField, ReadOnly]
+        internal bool intendsBoost;
 
         void Start() {
             RecreateModel();
@@ -85,14 +81,26 @@ namespace SitS.Player {
 #endif
         }
 
+        [SerializeField]
+        Vector3 gravityStep;
+
+        [SerializeField]
+        Vector3 liftStep;
+
+        [SerializeField]
+        Vector3 dragStep;
+
+        [SerializeField]
+        Vector3 velocity = Vector3.zero;
+
         void FixedUpdate() {
             if (!Application.isPlaying) {
                 return;
             }
 
-            float deltaYaw = Time.deltaTime * yawSpeed * intendedYaw;
-            float deltaPitch = Time.deltaTime * pitchSpeed * intendedPitch;
-            float deltaRoll = Time.deltaTime * rollSpeed * intendedRoll;
+            float deltaYaw = Time.deltaTime * model.yawSpeed * intendedYaw;
+            float deltaPitch = Time.deltaTime * model.pitchSpeed * intendedPitch;
+            float deltaRoll = Time.deltaTime * model.rollSpeed * intendedRoll;
 
             var current = transform.eulerAngles;
 
@@ -105,7 +113,17 @@ namespace SitS.Player {
 
             transform.eulerAngles = current;
 
-            transform.position += forwardSpeed * Time.deltaTime * transform.forward;
+            gravityStep = Time.deltaTime * model.gravityMultiplier * Physics.gravity;
+
+            liftStep = Time.deltaTime * model.liftCoefficient * model.area * velocity.sqrMagnitude * transform.up;
+
+            dragStep = velocity == Vector3.zero
+                ? Vector3.zero
+                : Time.deltaTime * model.dragCoefficient * model.area * velocity.sqrMagnitude * velocity.normalized;
+
+            velocity += gravityStep + liftStep - dragStep;
+
+            transform.position += Time.deltaTime * velocity;
         }
     }
 }
