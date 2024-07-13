@@ -25,6 +25,8 @@ namespace SitS.Player {
         [SerializeField]
         internal float gravityMultiplier = 1;
         [SerializeField]
+        internal float boostMultiplier = 1;
+        [SerializeField]
         internal float area = 1;
     }
 }

@@ -1,5 +1,4 @@
-﻿using MyBox;
-using Slothsoft.UnityExtensions;
+﻿using Slothsoft.UnityExtensions;
 using UnityEngine;
 
 namespace SitS.Player {
@@ -7,7 +6,13 @@ namespace SitS.Player {
     sealed class PlaneController : MonoBehaviour {
 
         [SerializeField, Expandable]
-        PlaneModel model;
+        PlaneModel plane;
+        [SerializeField, Expandable]
+        InputModel input;
+        [SerializeField, Expandable]
+        PlayerModel player;
+
+        [Space]
         [SerializeField]
         Rigidbody attachedRigidbody;
 
@@ -17,22 +22,12 @@ namespace SitS.Player {
         [SerializeField]
         float maximumPitch = 90;
 
-        GameObject modelPrefab => model
-            ? model.meshPrefab
+        GameObject modelPrefab => plane
+            ? plane.meshPrefab
             : null;
         GameObject modelInstance => transform.childCount > 0
             ? transform.GetChild(0).gameObject
             : null;
-
-        [Space]
-        [SerializeField, ReadOnly]
-        internal float intendedYaw;
-        [SerializeField, ReadOnly]
-        internal float intendedPitch;
-        [SerializeField, ReadOnly]
-        internal float intendedRoll;
-        [SerializeField, ReadOnly]
-        internal bool intendsBoost;
 
         void Start() {
             RecreateModel();
@@ -84,6 +79,9 @@ namespace SitS.Player {
         }
 
         [SerializeField]
+        Vector3 boostStep;
+
+        [SerializeField]
         Vector3 gravityStep;
 
         [SerializeField]
@@ -100,9 +98,9 @@ namespace SitS.Player {
                 return;
             }
 
-            float deltaYaw = model.yawSpeed * intendedYaw;
-            float deltaPitch = model.pitchSpeed * intendedPitch;
-            float deltaRoll = model.rollSpeed * intendedRoll;
+            float deltaYaw = plane.yawSpeed * input.intendedYaw;
+            float deltaPitch = plane.pitchSpeed * input.intendedPitch;
+            float deltaRoll = plane.rollSpeed * input.intendedRoll;
 
             // var deltaRotation = Quaternion.Euler(deltaYaw, deltaPitch, deltaRoll);
 
@@ -110,19 +108,33 @@ namespace SitS.Player {
 
             velocity = attachedRigidbody.velocity;
 
-            gravityStep = Time.deltaTime * model.gravityMultiplier * Vector3.down;
+            ProcessBoost();
+
+            gravityStep = Time.deltaTime * plane.gravityMultiplier * Vector3.down;
 
             liftStep = velocity == Vector3.zero
                 ? Vector3.zero
-                : model.liftRotation * (Time.deltaTime * model.liftCoefficient * model.area * velocity.sqrMagnitude * velocity.normalized);
+                : plane.liftRotation * (Time.deltaTime * plane.liftCoefficient * plane.area * velocity.sqrMagnitude * velocity.normalized);
 
             dragStep = velocity == Vector3.zero
                 ? Vector3.zero
-                : Time.deltaTime * model.dragCoefficient * model.area * velocity.sqrMagnitude * velocity.normalized;
+                : Time.deltaTime * plane.dragCoefficient * plane.area * velocity.sqrMagnitude * velocity.normalized;
 
-            velocity += gravityStep + liftStep - dragStep;
+            velocity += boostStep + gravityStep + liftStep - dragStep;
 
             attachedRigidbody.velocity = velocity;
+        }
+
+        void ProcessBoost() {
+
+            player.isBoosting = input.intendsBoost && player.canBoost;
+
+            if (player.isBoosting) {
+                player.health -= Mathf.Clamp01(Time.deltaTime * player.burnSpeed);
+                boostStep = Time.deltaTime * plane.boostMultiplier * transform.forward;
+            } else {
+                boostStep = Vector3.zero;
+            }
         }
     }
 }

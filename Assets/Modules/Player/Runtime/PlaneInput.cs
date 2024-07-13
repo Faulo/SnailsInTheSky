@@ -5,11 +5,11 @@ using UnityEngine.InputSystem;
 
 namespace SitS.Player {
     sealed class PlaneInput : MonoBehaviour {
-        [SerializeField]
-        PlaneController controller;
+        [SerializeField, Expandable]
+        InputModel input;
 
         public void OnTilt(InputValue input) {
-            (controller.intendedPitch, controller.intendedYaw) = input.Get<Vector2>();
+            (this.input.intendedPitch, this.input.intendedYaw) = input.Get<Vector2>();
         }
 
         [Space]
@@ -34,7 +34,7 @@ namespace SitS.Player {
         }
 
         void UpdateRoll() {
-            controller.intendedRoll = leftRoll - rightRoll;
+            input.intendedRoll = leftRoll - rightRoll;
         }
 
         public void OnRollLeft(InputValue input) {
@@ -43,6 +43,10 @@ namespace SitS.Player {
 
         public void OnRollRight(InputValue input) {
             rightRoll = input.Get<float>();
+        }
+
+        public void OnFire(InputValue input) {
+            this.input.intendsBoost = input.isPressed;
         }
     }
 }
