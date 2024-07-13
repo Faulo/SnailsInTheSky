@@ -33,6 +33,7 @@ $RECYCLE.BIN/
 # == FMOD ==
 !/FMOD Project/
 /FMOD Project/.*
+Cache*
 
 # Never ignore DLLs in the FMOD subfolder.
 !/[Aa]ssets/Plugins/FMOD/**/lib/*
