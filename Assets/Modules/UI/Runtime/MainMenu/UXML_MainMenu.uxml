@@ -1,0 +1,22 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="UXML_Credits" src="project://database/Assets/Modules/UI/Runtime/Credits/UXML_Credits.uxml?fileID=9197481963319205126&amp;guid=69911da7294a93945bdf1c344297e7e2&amp;type=3#UXML_Credits" />
+    <Style src="project://database/Assets/Modules/UI/Runtime/USS_DefaultStyle.uss?fileID=7433441132597879392&amp;guid=e78ee50063f467243ad4274e645660e1&amp;type=3#DefaultStyle" />
+    <ui:VisualElement style="flex-grow: 1;">
+        <ui:VisualElement style="flex-grow: 0; flex-direction: row; justify-content: flex-start; align-items: flex-start; flex-basis: initial; align-self: flex-start; position: absolute; width: 100%; height: 100%;">
+            <ui:Instance template="UXML_Credits" name="Credits" style="margin-top: 20px; margin-right: 20px; margin-bottom: 20px; margin-left: 20px; visibility: hidden;" />
+        </ui:VisualElement>
+        <ui:VisualElement style="flex-grow: 1; align-items: stretch; align-self: center; position: absolute; width: 100%; height: 100%;">
+            <ui:VisualElement name="Spacer" style="flex-grow: 1; height: 10%;" />
+            <ui:VisualElement name="Title" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Plugins/EmaceArt/it%60s%2080%60s_FREE/Textures/EAThe80_MoviePostersTexture.psd?fileID=2800000&amp;guid=e71d0081b01083a42aa16c01f138cba8&amp;type=3#EAThe80_MoviePostersTexture&quot;); -unity-background-scale-mode: scale-to-fit; border-top-width: 0; height: 25%;" />
+            <ui:VisualElement name="Spacer" style="flex-grow: 1; height: 5%;" />
+            <ui:VisualElement name="Buttons" style="flex-grow: 1; border-top-width: 0; border-bottom-width: 0; border-right-width: 900px; border-left-width: 900px; height: 50%; align-self: stretch;">
+                <ui:Button text="Snail Away" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ButtonStartGame" class="button-menu" style="align-self: auto;" />
+                <ui:Button text="Configure Snailing" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ButtonShowOptions" class="button-menu" />
+                <ui:Button text="Who Snailed This" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ButtonShowCredits" enable-rich-text="true" class="button-menu" style="height: auto;" />
+                <ui:Button text="Stop Snailing" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ButtonQuit" class="button-menu" />
+            </ui:VisualElement>
+            <ui:VisualElement name="Spacer" style="flex-grow: 1; height: 10%;" />
+        </ui:VisualElement>
+        <ui:VisualElement style="flex-grow: 1; align-self: flex-end;" />
+    </ui:VisualElement>
+</ui:UXML>
