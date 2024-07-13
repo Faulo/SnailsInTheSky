@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Plane_StarWing
   m_EditorClassIdentifier: 
   displayName: Star Wing
-  portrait: {fileID: 2800000, guid: d0032a18bc34e6b4fb48e3d731741ad1, type: 3}
+  portrait: {fileID: 2800000, guid: bd5f5074f49ae8e40b874e70bbd76c0d, type: 3}
   yawSpeed: 1
   pitchSpeed: 1
   rollSpeed: 1
