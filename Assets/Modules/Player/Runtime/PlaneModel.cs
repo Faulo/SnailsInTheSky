@@ -21,6 +21,8 @@ namespace SitS.Player {
         [SerializeField]
         internal float liftCoefficient = 1;
         [SerializeField]
+        internal Quaternion liftRotation = Quaternion.identity;
+        [SerializeField]
         internal float gravityMultiplier = 1;
         [SerializeField]
         internal float area = 1;

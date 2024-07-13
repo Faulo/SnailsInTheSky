@@ -18,6 +18,7 @@ MonoBehaviour:
   meshPrefab: {fileID: 919132149155446097, guid: f801cc22d44e08e4e8594b9f1c1f7a59,
     type: 3}
   dragCoefficient: 1
-  liftCoefficient: 1
-  gravityMultiplier: 0
+  liftCoefficient: 2
+  liftRotation: {x: 0.70710677, y: 0, z: 0, w: 0.70710677}
+  gravityMultiplier: 0.25
   area: 1

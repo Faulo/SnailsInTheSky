@@ -102,20 +102,15 @@ namespace SitS.Player {
             float deltaPitch = Time.deltaTime * model.pitchSpeed * intendedPitch;
             float deltaRoll = Time.deltaTime * model.rollSpeed * intendedRoll;
 
-            var current = transform.eulerAngles;
+            var deltaRotation = Quaternion.Euler(deltaYaw, deltaPitch, deltaRoll);
 
-            current.x += deltaYaw;
-            current.y += deltaPitch;
-            current.z += deltaRoll;
-
-            //current.x = Mathf.Clamp(current.x, -maximumYaw, maximumYaw);
-            //current.y = Mathf.Clamp(current.y, -maximumPitch, maximumPitch);
-
-            transform.eulerAngles = current;
+            transform.rotation *= deltaRotation;
 
             gravityStep = Time.deltaTime * model.gravityMultiplier * Physics.gravity;
 
-            liftStep = Time.deltaTime * model.liftCoefficient * model.area * velocity.sqrMagnitude * transform.up;
+            liftStep = velocity == Vector3.zero
+                ? Vector3.zero
+                : model.liftRotation * (Time.deltaTime * model.liftCoefficient * model.area * velocity.sqrMagnitude * velocity.normalized);
 
             dragStep = velocity == Vector3.zero
                 ? Vector3.zero
