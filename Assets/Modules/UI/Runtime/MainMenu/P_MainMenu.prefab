@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiDocument: {fileID: 8884910519854780232}
-  startScene: SC_L01_KidsRoom
+  startScene: SC_PlaneSelect
 --- !u!114 &8884910519854780232
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -7,7 +7,7 @@ public class MainMenu : MonoBehaviour
     [SerializeField]
     public UIDocument uiDocument;
 
-    public string startScene = "SC_L01_KidsRoom";
+    public string startScene = "SC_PlaneSelect";
 
     Button uiButtonStartGame;
     Button uiButtonShowOptions;

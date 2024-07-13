@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using SitS.Player;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 namespace SitS.UI.PlaneSelect
@@ -14,21 +15,19 @@ namespace SitS.UI.PlaneSelect
         [SerializeField]
         List<PlaneModel> planeModels;
 
+        public string gameScene = "SC_L01_KidsRoom";
+
         PlaneListVM planeListVM;
 
         void OnEnable()
         {
             var uiDocument = GetComponent<UIDocument>();
 
-            // @TODO: Stop player simulation
-
             planeListVM = new PlaneListVM();
             planeListVM.Init(uiDocument.rootVisualElement, planeModels, listEntryTemplate);
             planeListVM.onPlaneSelected += (PlaneModel selectedPlaneModel) =>
             {
-                uiDocument.rootVisualElement.RemoveFromHierarchy();
-
-                // @TODO: Start/resume player simulation
+                SceneManager.LoadScene(gameScene);
             };
         }
     }
