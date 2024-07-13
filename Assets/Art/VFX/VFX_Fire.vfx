@@ -17,9 +17,9 @@ MonoBehaviour:
   categories: []
   uiBounds:
     serializedVersion: 2
-    x: 417
+    x: 436
     y: -190
-    width: 4177
+    width: 4158
     height: 1737
 --- !u!114 &114350483966674976
 MonoBehaviour:
@@ -5297,7 +5297,7 @@ MonoBehaviour:
     linkedSlots:
     - outputSlot: {fileID: 8926484042661614818}
       inputSlot: {fileID: 8926484042661615203}
-    position: {x: 417, y: 733}
+    position: {x: 436, y: 666}
     expandedSlots:
     - {fileID: 8926484042661614818}
     - {fileID: 8926484042661614819}
@@ -6331,7 +6331,7 @@ MonoBehaviour:
     linkedSlots:
     - outputSlot: {fileID: 8926484042661614935}
       inputSlot: {fileID: 8926484042661615090}
-    position: {x: 792, y: 1019}
+    position: {x: 806, y: 940}
     expandedSlots: []
     expanded: 0
   - m_Id: 3
@@ -6433,7 +6433,7 @@ MonoBehaviour:
         m_SerializableType: UnityEditor.VFX.Line, Unity.VisualEffectGraph.Editor,
           Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
       m_SerializableObject: '{"start":{"x":0.0,"y":0.0,"z":0.0},"end":{"x":1.0,"y":0.0,"z":0.0}}'
-    m_Space: 1
+    m_Space: 0
   m_Property:
     name: line
     m_serializedType:
@@ -7159,7 +7159,7 @@ MonoBehaviour:
     linkedSlots:
     - outputSlot: {fileID: 8926484042661615053}
       inputSlot: {fileID: 8926484042661615057}
-    position: {x: 800, y: 565}
+    position: {x: 814, y: 486}
     expandedSlots: []
     expanded: 0
   - m_Id: 2
@@ -7247,7 +7247,7 @@ MonoBehaviour:
     linkedSlots:
     - outputSlot: {fileID: 8926484042661615055}
       inputSlot: {fileID: 8926484042661615085}
-    position: {x: 815, y: 633}
+    position: {x: 829, y: 554}
     expandedSlots: []
     expanded: 0
   - m_Id: 2
@@ -7308,7 +7308,7 @@ MonoBehaviour:
   m_UIIgnoredErrors: []
   m_Parent: {fileID: 114350483966674976}
   m_Children: []
-  m_UIPosition: {x: 982, y: 498}
+  m_UIPosition: {x: 996, y: 419}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
@@ -7445,7 +7445,7 @@ MonoBehaviour:
   m_UIIgnoredErrors: []
   m_Parent: {fileID: 114350483966674976}
   m_Children: []
-  m_UIPosition: {x: 982, y: 633}
+  m_UIPosition: {x: 996, y: 554}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
@@ -7582,7 +7582,7 @@ MonoBehaviour:
   m_UIIgnoredErrors: []
   m_Parent: {fileID: 114350483966674976}
   m_Children: []
-  m_UIPosition: {x: 967, y: 973}
+  m_UIPosition: {x: 981, y: 894}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
@@ -7720,7 +7720,7 @@ MonoBehaviour:
   m_UIIgnoredErrors: []
   m_Parent: {fileID: 114350483966674976}
   m_Children: []
-  m_UIPosition: {x: 1213, y: 832}
+  m_UIPosition: {x: 1227, y: 753}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
@@ -8021,7 +8021,7 @@ MonoBehaviour:
   m_UIIgnoredErrors: []
   m_Parent: {fileID: 114350483966674976}
   m_Children: []
-  m_UIPosition: {x: 1213, y: 682}
+  m_UIPosition: {x: 1227, y: 603}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
@@ -8554,7 +8554,7 @@ MonoBehaviour:
   m_UIIgnoredErrors: []
   m_Parent: {fileID: 114350483966674976}
   m_Children: []
-  m_UIPosition: {x: 572, y: 745}
+  m_UIPosition: {x: 586, y: 666}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
@@ -9032,7 +9032,7 @@ MonoBehaviour:
         m_SerializableType: UnityEditor.VFX.Position, Unity.VisualEffectGraph.Editor,
           Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
       m_SerializableObject: '{"position":{"x":0.0,"y":0.0,"z":0.0}}'
-    m_Space: 1
+    m_Space: 0
   m_Property:
     name: position
     m_serializedType:
@@ -9202,7 +9202,7 @@ MonoBehaviour:
         m_SerializableType: UnityEditor.VFX.Position, Unity.VisualEffectGraph.Editor,
           Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
       m_SerializableObject: '{"position":{"x":0.0,"y":0.0,"z":0.0}}'
-    m_Space: 1
+    m_Space: 0
   m_Property:
     name: tPos
     m_serializedType:
@@ -11191,7 +11191,7 @@ MonoBehaviour:
   m_Parent: {fileID: 114350483966674976}
   m_Children: []
   m_UIPosition: {x: 0, y: 0}
-  m_UICollapsed: 0
+  m_UICollapsed: 1
   m_UISuperCollapsed: 0
   m_InputSlots: []
   m_OutputSlots:
