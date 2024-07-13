@@ -13,7 +13,7 @@
     border-bottom-color: rgba(15, 48, 108, 0.23);
     rotate: 0;
     transform-origin: center;
-    background-color: rgba(45, 52, 72, 0.53);
+    background-color: rgba(34, 41, 60, 0.8);
     background-image: none;
     color: rgb(214, 250, 246);
     -unity-font-style: bold;
@@ -37,10 +37,14 @@
 
 .button-menu:hover {
     scale: 1.1 1.1;
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(255, 207, 81, 0.79);
+    border-bottom-color: rgba(255, 207, 81, 0.79);
 }
 
 .button-menu:active {
-    scale: 1.1 1.1;
+    scale: 1 1;
     translate: 0 5px;
     rotate: 1deg;
 }
