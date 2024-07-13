@@ -21,6 +21,9 @@ namespace SitS.Player {
             instance = Instantiate(prefab, transform);
         }
 
+        [SerializeField]
+        internal PlaneModel plane;
+
         [SerializeField, Range(0, 1)]
         internal float health = 1;
         internal bool canBoost => health > 0;

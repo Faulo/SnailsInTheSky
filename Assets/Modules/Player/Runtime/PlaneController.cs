@@ -6,11 +6,11 @@ namespace SitS.Player {
     sealed class PlaneController : MonoBehaviour {
 
         [SerializeField, Expandable]
-        PlaneModel plane;
-        [SerializeField, Expandable]
         InputModel input;
         [SerializeField, Expandable]
         PlayerModel player;
+
+        PlaneModel plane => player.plane;
 
         [Space]
         [SerializeField]
@@ -102,11 +102,13 @@ namespace SitS.Player {
             float deltaPitch = plane.pitchSpeed * input.intendedPitch;
             float deltaRoll = plane.rollSpeed * input.intendedRoll;
 
-            // var deltaRotation = Quaternion.Euler(deltaYaw, deltaPitch, deltaRoll);
+            var deltaRotation = Quaternion.Euler(deltaYaw, deltaPitch, deltaRoll);
 
             attachedRigidbody.angularVelocity = new(deltaYaw, deltaPitch, deltaRoll);
 
             velocity = attachedRigidbody.velocity;
+
+            velocity = deltaRotation * velocity;
 
             ProcessBoost();
 
