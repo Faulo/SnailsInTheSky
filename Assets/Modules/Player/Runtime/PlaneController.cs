@@ -8,6 +8,8 @@ namespace SitS.Player {
 
         [SerializeField, Expandable]
         PlaneModel model;
+        [SerializeField]
+        Rigidbody attachedRigidbody;
 
         [Space]
         [SerializeField]
@@ -98,15 +100,17 @@ namespace SitS.Player {
                 return;
             }
 
-            float deltaYaw = Time.deltaTime * model.yawSpeed * intendedYaw;
-            float deltaPitch = Time.deltaTime * model.pitchSpeed * intendedPitch;
-            float deltaRoll = Time.deltaTime * model.rollSpeed * intendedRoll;
+            float deltaYaw = model.yawSpeed * intendedYaw;
+            float deltaPitch = model.pitchSpeed * intendedPitch;
+            float deltaRoll = model.rollSpeed * intendedRoll;
 
-            var deltaRotation = Quaternion.Euler(deltaYaw, deltaPitch, deltaRoll);
+            // var deltaRotation = Quaternion.Euler(deltaYaw, deltaPitch, deltaRoll);
 
-            transform.rotation *= deltaRotation;
+            attachedRigidbody.angularVelocity = new(deltaYaw, deltaPitch, deltaRoll);
 
-            gravityStep = Time.deltaTime * model.gravityMultiplier * Physics.gravity;
+            velocity = attachedRigidbody.velocity;
+
+            gravityStep = Time.deltaTime * model.gravityMultiplier * Vector3.down;
 
             liftStep = velocity == Vector3.zero
                 ? Vector3.zero
@@ -118,7 +122,7 @@ namespace SitS.Player {
 
             velocity += gravityStep + liftStep - dragStep;
 
-            transform.position += Time.deltaTime * velocity;
+            attachedRigidbody.velocity = velocity;
         }
     }
 }
