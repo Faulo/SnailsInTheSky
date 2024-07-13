@@ -4,6 +4,9 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    [SerializeField]
+    public UIDocument uiDocument;
+
     public string startScene = "SC_L01_KidsRoom";
 
     private Button buttonStartGame;
@@ -15,7 +18,7 @@ public class MainMenu : MonoBehaviour
 
     private void OnEnable()
     {
-        VisualElement root = GetComponent<UIDocument>().rootVisualElement;
+        VisualElement root = uiDocument.rootVisualElement;
 
         buttonStartGame   = root.Q<Button>("ButtonStartGame");
         buttonShowOptions = root.Q<Button>("ButtonShowOptions");

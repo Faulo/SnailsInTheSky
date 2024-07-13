@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{f2874745-8d60-406e-829f-804b54eec364}">
+		<property name="name">
+			<value>Soundtrack</value>
+		</property>
+		<relationship name="folder">
+			<destination>{27b2a90f-048d-4196-93f9-adab3b8852dc}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{9d5de49e-ebc1-4a98-ad1b-3ad3db192623}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{9d5de49e-ebc1-4a98-ad1b-3ad3db192623}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>3</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>MainMenu</value>
+			<value>CharacterSelect</value>
+			<value>Flying</value>
+		</property>
+		<property name="isGlobal">
+			<value>true</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="isExposedRecursively">
+			<value>false</value>
+		</property>
+	</object>
+</objects>
