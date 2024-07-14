@@ -21,7 +21,7 @@ MonoBehaviour:
     type: 3}
   dragMinimum: 0
   dragMaximum: 1
-  dragBrakeMultiplier: 1
+  dragBrakeMultiplier: 0.25
   liftCoefficient: 0.1
   boostMultiplier: 0.5
   area: 1
