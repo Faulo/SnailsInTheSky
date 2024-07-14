@@ -45,5 +45,11 @@ namespace SitS.Player {
 
         [SerializeField]
         internal float burnSpeed = 1;
+
+        [SerializeField]
+        public uint collectiblesCollected = 0;
+
+        [SerializeField]
+        public uint collectiblesMax = 10;
     }
 }

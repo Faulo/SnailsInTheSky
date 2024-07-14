@@ -1,0 +1,16 @@
+{
+    "name": "Sits.Collectibles",
+    "rootNamespace": "",
+    "references": [
+        "GUID:2407e48440a3ed949b50d6d4138ebc7f"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

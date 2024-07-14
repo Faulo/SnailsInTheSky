@@ -1,9 +1,7 @@
-using System;
 using System.Collections;
 using UnityEngine;
-using UnityObject = UnityEngine.Object;
 
-namespace AssemblyCSharp {
+namespace Sits.Collectibles {
     sealed class Collectible : MonoBehaviour {
         [SerializeField]
         uint amount = 1;
