@@ -65,3 +65,14 @@
     color: rgb(10, 13, 72);
     text-shadow: 50px 50px 0 rgb(165, 198, 200);
 }
+
+.bar-menu {
+    align-self: stretch;
+    background-color: rgb(152, 248, 90);
+    -unity-background-image-tint-color: rgb(105, 209, 54);
+    border-left-color: rgba(190, 69, 69, 0);
+    border-right-color: rgba(190, 69, 69, 0);
+    border-top-color: rgba(190, 69, 69, 0);
+    border-bottom-color: rgba(190, 69, 69, 0);
+    color: rgb(0, 0, 0);
+}
