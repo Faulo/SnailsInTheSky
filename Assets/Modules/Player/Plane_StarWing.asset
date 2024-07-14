@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayName: Star Wing
   portrait: {fileID: 2800000, guid: bd5f5074f49ae8e40b874e70bbd76c0d, type: 3}
-  yawSpeed: 1
-  pitchSpeed: 1
-  rollSpeed: 1
+  yawSpeed: 1.5
+  pitchSpeed: 1.5
+  rollSpeed: 1.5
   meshPrefab: {fileID: 7273028374075025354, guid: cec632f126999494ea2115b0945480d5,
     type: 3}
   dragMinimum: 0
@@ -28,7 +28,7 @@ MonoBehaviour:
   minHealth: 1
   maxHealth: 2
   manoeuvrability: 1
-  maxManoeuvrability: 3
+  maxManoeuvrability: 4.5
   lift: 0.6666666
   maxLift: 0.3
   size: 0.4

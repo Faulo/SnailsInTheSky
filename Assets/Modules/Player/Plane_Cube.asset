@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayName: The Slip
   portrait: {fileID: 2800000, guid: d8ec1b4edaeba114f9a1e3213c21ad63, type: 3}
-  yawSpeed: 1
-  pitchSpeed: 1
-  rollSpeed: 1
+  yawSpeed: 0.5
+  pitchSpeed: 0.5
+  rollSpeed: 0.5
   meshPrefab: {fileID: 2989735064702407704, guid: b0b8423f97acb114cb24218565b0cee9,
     type: 3}
   dragMinimum: 0
@@ -27,8 +27,8 @@ MonoBehaviour:
   area: 1
   minHealth: 0.25
   maxHealth: 1
-  manoeuvrability: 1
-  maxManoeuvrability: 3
+  manoeuvrability: 0.33333334
+  maxManoeuvrability: 4.5
   lift: 0.3333333
   maxLift: 0.3
   size: 0.2
