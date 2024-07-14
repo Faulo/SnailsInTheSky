@@ -65,12 +65,15 @@ namespace SitS.Player {
             internal set => _rightBrake = Mathf.Clamp01(value);
         }
 
+        [Header("Collectibles")]
         [SerializeField]
         public uint collectiblesCollected = 0;
 
         [SerializeField]
         public uint collectiblesMax = 10;
 
+        public bool collectedEverything => collectiblesCollected == collectiblesMax;
+        
         [Header("Death")]
         [SerializeField]
         float _deadTime = 0;
