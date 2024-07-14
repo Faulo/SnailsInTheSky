@@ -62,6 +62,17 @@
     align-items: center;
     justify-content: flex-start;
     -unity-text-align: upper-center;
-    color: rgb(10, 13, 72);
+    color: rgba(23, 27, 58, 0.98);
     text-shadow: 50px 50px 0 rgb(165, 198, 200);
+}
+
+.bar-menu {
+    align-self: stretch;
+    background-color: rgb(152, 248, 90);
+    -unity-background-image-tint-color: rgb(105, 209, 54);
+    border-left-color: rgba(190, 69, 69, 0);
+    border-right-color: rgba(190, 69, 69, 0);
+    border-top-color: rgba(190, 69, 69, 0);
+    border-bottom-color: rgba(190, 69, 69, 0);
+    color: rgb(0, 0, 0);
 }
