@@ -69,5 +69,7 @@ namespace SitS.Player {
 
         [SerializeField]
         public uint collectiblesMax = 10;
+
+        public bool collectedEverything => collectiblesCollected == collectiblesMax;
     }
 }
