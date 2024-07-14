@@ -92,7 +92,7 @@ namespace SitS.Player {
                 return;
             }
 
-            if (!player.isAlive) {
+            if (!player.isAlive || transform.position.y < 0) {
                 ProcessDeath();
                 return;
             }
@@ -152,8 +152,12 @@ namespace SitS.Player {
             player.health -= Mathf.Clamp01(Time.deltaTime * player.burnSpeed);
 
             if (Mathf.Approximately(attachedRigidbody.velocity.sqrMagnitude, 0)) {
-                player.deadTime += Time.deltaTime;
+                ProcessDeathTimeout();
             }
+        }
+
+        void ProcessDeathTimeout() {
+            player.deadTime += Time.deltaTime;
         }
     }
 }
