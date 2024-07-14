@@ -26,7 +26,7 @@ namespace SitS.UI.EndScreen {
             uiButtonQuit = uiRoot.Q<Button>("ButtonQuit");
 
             uiTitle.text = playerModel.collectedEverything ? "You Won!" : "You Lost!";
-            uiMessage.text = "You collected " + playerModel.collectiblesCollected + " collectibles out of " + playerModel.collectiblesMax + "!";
+            uiMessage.text = "You collected " + playerModel.collectiblesCollected + " collectible(s) out of " + playerModel.collectiblesMax + "!";
             uiButtonPlaneSelect.clicked += () => SceneManager.LoadScene("SC_PlaneSelect");
             uiButtonQuit.clicked += () => Application.Quit();
         }
