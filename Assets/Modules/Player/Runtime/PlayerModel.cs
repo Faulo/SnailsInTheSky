@@ -1,4 +1,4 @@
-using System;
+using Slothsoft.UnityExtensions;
 using UnityEngine;
 
 namespace SitS.Player {
@@ -21,15 +21,19 @@ namespace SitS.Player {
             instance = Instantiate(prefab, transform);
         }
 
-        [SerializeField]
+        [SerializeField, Expandable]
         public PlaneModel plane;
 
-        [SerializeField, Range(0, 1)]
+        [SerializeField]
         float _health = 1;
-        public float health {
+        internal float health {
             get => _health;
-            internal set => _health = Mathf.Clamp01(value);
+            set => _health = Mathf.Clamp(value, 0, plane.maxHealth);
         }
+
+        public float normalizedHealth => health / plane.maxHealth;
+
+        public bool isAlive => health > plane.minHealth;
 
         internal bool canBoost => _health > 0;
 
@@ -46,6 +50,20 @@ namespace SitS.Player {
         [SerializeField]
         internal float burnSpeed = 1;
 
+        [SerializeField]
+        float _leftBrake = 0;
+        public float leftBrake {
+            get => _leftBrake;
+            internal set => _leftBrake = Mathf.Clamp01(value);
+        }
+
+        [SerializeField]
+        float _rightBrake = 0;
+        public float rightBrake {
+            get => _rightBrake;
+            internal set => _rightBrake = Mathf.Clamp01(value);
+        }
+        
         [SerializeField]
         public uint collectiblesCollected = 0;
 

@@ -24,8 +24,10 @@ namespace SitS.Player {
             : null;
 
         void Start() {
-            player.health = 1;
+            player.health = plane.maxHealth;
             player.isBoosting = false;
+            player.leftBrake = 0;
+            player.rightBrake = 0;
 
             RecreateModel();
         }
@@ -93,9 +95,9 @@ namespace SitS.Player {
             float deltaPitch = plane.pitchSpeed * input.intendedPitch;
             float deltaRoll = plane.rollSpeed * input.intendedRoll;
 
-            var deltaRotation = Quaternion.Euler(-deltaYaw, deltaPitch, deltaRoll);
+            var deltaRotation = Quaternion.Euler(-deltaYaw, deltaPitch, -deltaRoll);
 
-            attachedRigidbody.angularVelocity = attachedRigidbody.rotation * new Vector3(deltaYaw, deltaPitch, deltaRoll);
+            attachedRigidbody.angularVelocity = attachedRigidbody.rotation * new Vector3(deltaYaw, deltaPitch, -deltaRoll);
 
             velocity = attachedRigidbody.velocity;
 
@@ -113,7 +115,7 @@ namespace SitS.Player {
 
             liftStep = velocity == Vector3.zero
                 ? Vector3.zero
-                : Time.deltaTime * plane.liftCoefficient * plane.area * player.health * velocity.sqrMagnitude * player.alignment * transform.up;
+                : Time.deltaTime * plane.liftCoefficient * plane.area * player.normalizedHealth * velocity.sqrMagnitude * player.alignment * transform.up;
 
             velocity += boostStep + liftStep;
 
@@ -127,7 +129,9 @@ namespace SitS.Player {
 
             player.alignment = Mathf.InverseLerp(0, 1, dot);
 
-            attachedRigidbody.drag = Mathf.Lerp(plane.dragMaximum, plane.dragMinimum, player.alignment) * plane.area * player.health;
+            attachedRigidbody.drag = Mathf.Lerp(plane.dragMaximum, plane.dragMinimum, player.alignment) * plane.area * player.normalizedHealth;
+            attachedRigidbody.drag += player.leftBrake * plane.dragBrakeMultiplier;
+            attachedRigidbody.drag += player.rightBrake * plane.dragBrakeMultiplier;
         }
 
         void ProcessBoost() {

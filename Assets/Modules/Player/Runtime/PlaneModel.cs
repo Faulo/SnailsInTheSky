@@ -28,6 +28,8 @@ namespace SitS.Player {
         [SerializeField]
         internal float dragMaximum = 5;
         [SerializeField]
+        internal float dragBrakeMultiplier = 1;
+        [SerializeField]
         internal float liftCoefficient = 1;
         [SerializeField]
         internal Quaternion liftRotation = Quaternion.identity;
@@ -35,6 +37,8 @@ namespace SitS.Player {
         internal float boostMultiplier = 1;
         [SerializeField]
         internal float area = 1;
+        [SerializeField]
+        internal float minHealth = 0;
         [SerializeField]
         internal float maxHealth = 1;
 

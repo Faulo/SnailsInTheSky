@@ -17,8 +17,8 @@ namespace SitS.VFX {
 
         void Update() {
             float health = negate
-                ? 1 - player.health
-                : player.health;
+                ? 1 - player.normalizedHealth
+                : player.normalizedHealth;
 
             attachedRenderer.material.SetFloat(fieldName, health);
         }
