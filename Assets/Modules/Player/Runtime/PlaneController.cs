@@ -150,6 +150,7 @@ namespace SitS.Player {
 
         void ProcessDeath() {
             player.health -= Mathf.Clamp01(Time.deltaTime * player.burnSpeed);
+            player.isBoosting = false;
 
             if (Mathf.Approximately(attachedRigidbody.velocity.sqrMagnitude, 0)) {
                 ProcessDeathTimeout();

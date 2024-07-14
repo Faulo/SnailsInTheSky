@@ -24,7 +24,7 @@ MonoBehaviour:
   dragBrakeMultiplier: 1
   liftCoefficient: 0
   liftRotation: {x: 0.70710677, y: 0, z: 0, w: 0.70710677}
-  boostMultiplier: 2
+  boostMultiplier: 0.5
   area: 1
   minHealth: 0.25
   maxHealth: 1
@@ -34,5 +34,5 @@ MonoBehaviour:
   maxLift: 0.5
   size: 0.2
   maxSize: 5
-  nitro: 0.4
-  maxNitro: 5
+  nitro: 0.5
+  maxNitro: 1
