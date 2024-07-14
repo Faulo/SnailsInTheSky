@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Input
   m_EditorClassIdentifier: 
   intendedYaw: 0
-  intendedPitch: 0
   intendedRoll: 0
   intendsBoost: 0
+  intendedLeftBrake: 0
+  intendedRightBrake: 0

@@ -1,3 +1,4 @@
+using MyBox;
 using Slothsoft.UnityExtensions;
 using UnityEngine;
 
@@ -63,11 +64,28 @@ namespace SitS.Player {
             get => _rightBrake;
             internal set => _rightBrake = Mathf.Clamp01(value);
         }
-        
+
         [SerializeField]
         public uint collectiblesCollected = 0;
 
         [SerializeField]
         public uint collectiblesMax = 10;
+
+        [Header("Death")]
+        [SerializeField]
+        float _deadTime = 0;
+        internal float deadTime {
+            get => _deadTime;
+            set {
+                _deadTime = value;
+                if (_deadTime >= maxDeadTime) {
+                    deathScene.LoadScene();
+                }
+            }
+        }
+        [SerializeField]
+        float maxDeadTime = 1;
+        [SerializeField]
+        SceneReference deathScene = new();
     }
 }
