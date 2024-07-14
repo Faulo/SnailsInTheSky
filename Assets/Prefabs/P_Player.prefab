@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1275907593731126389}
   - component: {fileID: 3289107882958723448}
   - component: {fileID: 5212696629983143368}
+  - component: {fileID: 1580246985530226333}
   m_Layer: 0
   m_Name: P_Player
   m_TagString: Untagged
@@ -93,16 +94,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48da7765bfc327447ad90ea3c9d4d954, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  plane: {fileID: 11400000, guid: 4739a453278f3bc48b55aa0a07227ef6, type: 2}
   input: {fileID: 11400000, guid: d1b24ec285aed7d438b6e0f6360e3624, type: 2}
   player: {fileID: 11400000, guid: 26c319f71a86a3e45a76a23cc5c091ea, type: 2}
   attachedRigidbody: {fileID: 5212696629983143368}
-  maximumYaw: 90
-  maximumPitch: 90
   boostStep: {x: 0, y: 0, z: 0}
-  gravityStep: {x: 0, y: 0, z: 0}
   liftStep: {x: 0, y: 0, z: 0}
-  dragStep: {x: 0, y: 0, z: 0}
   velocity: {x: 0, y: 0, z: 0}
 --- !u!54 &5212696629983143368
 Rigidbody:
@@ -131,3 +127,15 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1580246985530226333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 194657362715663166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1acff976efb90c2468c1af96914a2e5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
