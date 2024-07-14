@@ -97,6 +97,9 @@ namespace SitS.Player {
                 return;
             }
 
+            player.leftBrake = input.intendedLeftBrake;
+            player.rightBrake = input.intendedRightBrake;
+
             float deltaYaw = plane.yawSpeed * input.intendedYaw;
             float deltaPitch = plane.pitchSpeed * input.intendedPitch;
             float deltaRoll = plane.rollSpeed * input.intendedRoll;
@@ -151,6 +154,8 @@ namespace SitS.Player {
         void ProcessDeath() {
             player.health -= Mathf.Clamp01(Time.deltaTime * player.burnSpeed);
             player.isBoosting = false;
+            player.leftBrake = 0;
+            player.rightBrake = 0;
 
             if (Mathf.Approximately(attachedRigidbody.velocity.sqrMagnitude, 0)) {
                 ProcessDeathTimeout();

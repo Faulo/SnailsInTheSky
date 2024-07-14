@@ -22,15 +22,15 @@ MonoBehaviour:
   dragMinimum: 0
   dragMaximum: 1
   dragBrakeMultiplier: 1
-  liftCoefficient: 0.25
+  liftCoefficient: 0.1
   boostMultiplier: 0.5
   area: 1
   minHealth: 0.25
   maxHealth: 1
   manoeuvrability: 1
   maxManoeuvrability: 3
-  lift: 0.5
-  maxLift: 0.5
+  lift: 0.3333333
+  maxLift: 0.3
   size: 0.2
   maxSize: 5
   nitro: 0.5
