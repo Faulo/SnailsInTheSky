@@ -76,3 +76,32 @@
     border-bottom-color: rgba(190, 69, 69, 0);
     color: rgb(0, 0, 0);
 }
+
+.text {
+    color: rgb(214, 250, 246);
+    font-size: 20px;
+}
+
+.regular-bg {
+    flex-grow: 1;
+    background-color: rgba(7, 9, 13, 0.69);
+    color: rgb(214, 250, 246);
+    -unity-font-style: normal;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    border-left-color: rgb(130, 192, 184);
+    border-right-color: rgb(130, 192, 184);
+    border-top-color: rgb(130, 192, 184);
+    border-bottom-color: rgb(130, 192, 184);
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    font-size: 20px;
+}

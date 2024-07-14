@@ -1,0 +1,14 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Modules/UI/Runtime/USS_DefaultStyle.uss?fileID=7433441132597879392&amp;guid=e78ee50063f467243ad4274e645660e1&amp;type=3#USS_DefaultStyle" />
+    <ui:VisualElement style="flex-grow: 1; justify-content: flex-end; align-items: flex-end; bottom: auto; right: auto; top: auto; left: auto; font-size: 20px; padding-top: 30px; padding-right: 30px; padding-bottom: 30px; padding-left: 30px;">
+        <ui:VisualElement style="flex-grow: 1; min-width: 100%; min-height: 100%;" />
+        <ui:VisualElement name="VisualElement" class="regular-bg" style="flex-grow: 1; flex-direction: column; align-items: flex-start; justify-content: flex-end; -unity-text-align: lower-center; align-self: flex-end; height: auto; min-height: 80px; position: relative; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; top: 0; left: 0;">
+            <ui:Label tabindex="-1" text="Paper Snips:" parse-escape-sequences="true" display-tooltip-when-elided="true" class="text" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; -unity-text-align: lower-left; align-items: flex-start;" />
+            <ui:VisualElement name="VisualElement" style="flex-grow: 1; flex-direction: row; justify-content: flex-start; align-self: center; align-items: flex-end; -unity-text-align: lower-left;">
+                <ui:Label tabindex="-1" text="0" parse-escape-sequences="true" display-tooltip-when-elided="true" name="CurrentCollectibles" class="text" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; align-items: flex-start;" />
+                <ui:Label tabindex="-1" text="/" parse-escape-sequences="true" display-tooltip-when-elided="true" class="text" style="padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0;" />
+                <ui:Label tabindex="-1" text="10" parse-escape-sequences="true" display-tooltip-when-elided="true" name="MaxCollectibles" class="text" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
