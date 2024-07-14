@@ -13,16 +13,16 @@ MonoBehaviour:
   m_Name: Player
   m_EditorClassIdentifier: 
   prefab: {fileID: 5446436089485046346, guid: 17da0fe43e7028f439f5653483e76b83, type: 3}
-  plane: {fileID: 11400000, guid: d8295f023eff1a749b7472ec353716d7, type: 2}
-  _health: 0.9483334
-  alignment: 0.75723636
+  plane: {fileID: 11400000, guid: 47a16c874e814ab4ab76ac6d8529c23f, type: 2}
+  _health: 0.27833498
+  alignment: 0.9746725
   _isBoosting: 0
   burnSpeed: 0.1
   _leftBrake: 0
   _rightBrake: 0
   collectiblesCollected: 0
-  collectiblesMax: 10
-  _deadTime: 0
+  collectiblesMax: 7
+  _deadTime: 1.0166664
   maxDeadTime: 1
   deathScene:
     Scene: {fileID: 102900000, guid: a0bb416f451414a49a0f33f83dd645f4, type: 3}
