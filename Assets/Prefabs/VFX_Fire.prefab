@@ -169,3 +169,6 @@ MonoBehaviour:
   player: {fileID: 11400000, guid: 26c319f71a86a3e45a76a23cc5c091ea, type: 2}
   visualEffect: {fileID: 2065452313411712624}
   fieldName: IsEmitting
+  initialPosZ: StartPosZ
+  endPosZ: EndPosZ
+  currentPosZ: PosDeltaZ

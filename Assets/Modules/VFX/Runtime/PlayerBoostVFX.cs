@@ -14,9 +14,9 @@ namespace SitS.VFX {
         [SerializeField]
         string fieldName = "IsEmitting";
         [SerializeField]
-        string initialPosZ = "startPosZ";
+        string initialPosZ = "StartPosZ";
         [SerializeField]
-        string endPosZ = "endPosZ";
+        string endPosZ = "EndPosZ";
         [SerializeField]
         string currentPosZ = "PosDeltaZ";
 
@@ -28,8 +28,8 @@ namespace SitS.VFX {
             initialPositionZ = visualEffect.GetFloat(initialPosZ);
             float endPositionZ = 0;
             endPositionZ = visualEffect.GetFloat(endPosZ);
-            float currentHealth = player.health;
-            visualEffect.SetFloat(currentPosZ, Mathf.Lerp(initialPositionZ, endPositionZ, currentHealth));
+            float currentHealth = player.normalizedHealth;
+            visualEffect.SetFloat(currentPosZ, Mathf.Lerp(endPositionZ, initialPositionZ, currentHealth));
         }
     }
 }
