@@ -28,6 +28,7 @@ namespace SitS.Player {
             player.isBoosting = false;
             player.leftBrake = 0;
             player.rightBrake = 0;
+            player.deadTime = 0;
 
             RecreateModel();
         }
@@ -91,6 +92,11 @@ namespace SitS.Player {
                 return;
             }
 
+            if (!player.isAlive) {
+                ProcessDeath();
+                return;
+            }
+
             float deltaYaw = plane.yawSpeed * input.intendedYaw;
             float deltaPitch = plane.pitchSpeed * input.intendedPitch;
             float deltaRoll = plane.rollSpeed * input.intendedRoll;
@@ -139,6 +145,14 @@ namespace SitS.Player {
 
             if (player.isBoosting) {
                 player.health -= Mathf.Clamp01(Time.deltaTime * player.burnSpeed);
+            }
+        }
+
+        void ProcessDeath() {
+            player.health -= Mathf.Clamp01(Time.deltaTime * player.burnSpeed);
+
+            if (Mathf.Approximately(attachedRigidbody.velocity.sqrMagnitude, 0)) {
+                player.deadTime += Time.deltaTime;
             }
         }
     }
