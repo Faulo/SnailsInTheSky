@@ -10,7 +10,6 @@ public class MainMenu : MonoBehaviour {
 
     Button uiButtonStartGame;
     Button uiButtonShowOptions;
-    Button uiButtonShowCredits;
     Button uiButtonQuit;
 
     VisualElement uiCredits;
@@ -20,13 +19,11 @@ public class MainMenu : MonoBehaviour {
 
         uiButtonStartGame = uiRoot.Q<Button>("ButtonStartGame");
         uiButtonShowOptions = uiRoot.Q<Button>("ButtonShowOptions");
-        uiButtonShowCredits = uiRoot.Q<Button>("ButtonShowCredits");
         uiButtonQuit = uiRoot.Q<Button>("ButtonQuit");
 
         uiCredits = uiRoot.Q<VisualElement>("Credits");
 
         uiButtonStartGame.clicked += () => SceneManager.LoadScene(startScene);
-        uiButtonShowCredits.clicked += () => uiCredits.visible = !uiCredits.visible;
         uiButtonQuit.clicked += () => Application.Quit();
 
         uiButtonStartGame.Focus();
