@@ -115,7 +115,7 @@ namespace SitS.Player {
 
             liftStep = velocity == Vector3.zero
                 ? Vector3.zero
-                : Time.deltaTime * plane.liftCoefficient * plane.area * player.health * velocity.sqrMagnitude * player.alignment * transform.up;
+                : Time.deltaTime * plane.liftCoefficient * plane.area * player.normalizedHealth * velocity.sqrMagnitude * player.alignment * transform.up;
 
             velocity += boostStep + liftStep;
 
@@ -129,7 +129,7 @@ namespace SitS.Player {
 
             player.alignment = Mathf.InverseLerp(0, 1, dot);
 
-            attachedRigidbody.drag = Mathf.Lerp(plane.dragMaximum, plane.dragMinimum, player.alignment) * plane.area * player.health;
+            attachedRigidbody.drag = Mathf.Lerp(plane.dragMaximum, plane.dragMinimum, player.alignment) * plane.area * player.normalizedHealth;
             attachedRigidbody.drag += player.leftBrake * plane.dragBrakeMultiplier;
             attachedRigidbody.drag += player.rightBrake * plane.dragBrakeMultiplier;
         }
