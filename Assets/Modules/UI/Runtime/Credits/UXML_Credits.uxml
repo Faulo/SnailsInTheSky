@@ -1,7 +1,7 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:VisualElement style="flex-grow: 1;">
-        <ui:Label tabindex="-1" text="Katharina Broswik ~ 3D Art, Tech Art" parse-escape-sequences="true" display-tooltip-when-elided="true" />
-        <ui:Label tabindex="-1" text="Daniel Schulz ~ Programming, Game Design" parse-escape-sequences="true" display-tooltip-when-elided="true" enable-rich-text="false" />
-        <ui:Label tabindex="-1" text="Gregor Sönnichsen ~ Level Design" parse-escape-sequences="true" display-tooltip-when-elided="true" />
+    <ui:VisualElement style="flex-grow: 1; background-color: rgba(7, 9, 13, 0.69); color: rgb(214, 250, 246); -unity-font-style: normal; padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px; border-left-color: rgb(130, 192, 184); border-right-color: rgb(130, 192, 184); border-top-color: rgb(130, 192, 184); border-bottom-color: rgb(130, 192, 184); border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; border-top-left-radius: 0; border-top-right-radius: 0; border-bottom-right-radius: 0; border-bottom-left-radius: 0; font-size: 20px;">
+        <ui:Label tabindex="-1" text="&lt;b&gt;Katharina Broswik&lt;/b&gt; → 3D Art, Tech Art" parse-escape-sequences="false" display-tooltip-when-elided="true" enable-rich-text="true" />
+        <ui:Label tabindex="-1" text="&lt;b&gt;Daniel Schulz&lt;/b&gt; → Programming, Game Design" parse-escape-sequences="true" display-tooltip-when-elided="true" enable-rich-text="true" style="align-self: center; color: rgb(214, 250, 246);" />
+        <ui:Label tabindex="-1" text="&lt;b&gt;Gregor Sönnichsen&lt;/b&gt; → Level Design, UI" parse-escape-sequences="true" display-tooltip-when-elided="true" enable-rich-text="true" style="align-self: flex-end;" />
     </ui:VisualElement>
 </ui:UXML>
