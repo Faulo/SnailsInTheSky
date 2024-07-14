@@ -26,10 +26,14 @@ namespace SitS.Player {
 
         [SerializeField]
         float _health = 1;
-        public float health {
+        internal float health {
             get => _health;
-            internal set => _health = Mathf.Clamp(value, 0, plane.maxHealth);
+            set => _health = Mathf.Clamp(value, 0, plane.maxHealth);
         }
+
+        public float normalizedHealth => health / plane.maxHealth;
+
+        public bool isAlive => health > plane.minHealth;
 
         internal bool canBoost => _health > 0;
 

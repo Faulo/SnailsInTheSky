@@ -38,6 +38,8 @@ namespace SitS.Player {
         [SerializeField]
         internal float area = 1;
         [SerializeField]
+        internal float minHealth = 0;
+        [SerializeField]
         internal float maxHealth = 1;
 
         [Header("Stats")]
