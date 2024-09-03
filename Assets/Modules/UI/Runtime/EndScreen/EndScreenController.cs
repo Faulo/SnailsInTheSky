@@ -1,8 +1,6 @@
-using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
-using UnityObject = UnityEngine.Object;
 
 namespace SitS.UI.EndScreen {
     sealed class EndScreenController : MonoBehaviour {

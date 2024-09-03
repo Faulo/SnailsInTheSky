@@ -5,7 +5,7 @@ namespace Sits.Collectibles {
         [SerializeField]
         SitS.Player.PlayerModel playerModel;
 
-        private void OnEnable() {
+        void OnEnable() {
             playerModel.collectiblesCollected = 0;
         }
 

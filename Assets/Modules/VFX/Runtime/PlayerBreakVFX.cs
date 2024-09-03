@@ -17,6 +17,7 @@ namespace SitS.VFX {
                 if (leftBreakValue > 0f) {
                     Debug.Log(leftBreakValue);
                 }
+
                 breakEffectLeft.emitting = leftBreakValue > 0f;
                 breakEffectLeft.startWidth = Mathf.Lerp(0.13f, 0.05f, leftBreakValue);
 

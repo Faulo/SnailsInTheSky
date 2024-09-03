@@ -73,7 +73,7 @@ namespace SitS.Player {
         public uint collectiblesMax = 10;
 
         public bool collectedEverything => collectiblesCollected == collectiblesMax;
-        
+
         [Header("Death")]
         [SerializeField]
         float _deadTime = 0;
