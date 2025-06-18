@@ -10,13 +10,6 @@
         "com.inkle.ink-unity-integration",
         "nl.jeffreylanters.tweens"
       ]
-    },
-    {
-      "name": "Unity NuGet",
-      "url": "https://unitynuget-registry.azurewebsites.net",
-      "scopes": [
-        "org.nuget"
-      ]
     }
   ],
   "dependencies": {
@@ -35,7 +28,6 @@
     "com.unity.visualeffectgraph": "14.0.10",
     "com.unity.visualscripting": "1.9.4",
     "net.slothsoft.unity-extensions": "3.1.0",
-    "org.nuget.nsubstitute": "5.1.0",
     "com.unity.modules.animation": "1.0.0",
     "com.unity.modules.assetbundle": "1.0.0",
     "com.unity.modules.director": "1.0.0",
